@@ -10,7 +10,28 @@
     <title>cases</title>
 
     <style>
-        
+        body{
+            background-color: black;
+            color: white;
+        }
+        .dataIndia .col-3 {
+            border: 2px solid #064751;
+            padding: 5px;
+        }
+        .dataIndia{
+            width: 90%;
+            margin: auto;
+            color: white;
+        }
+        .dataIndia p{
+            margin: 0 auto 0 auto;
+        }
+    
+        .headData .col-3{
+            font-size: 2vw;
+            color: #042180;
+            background-color: #6ac6c3;
+        }
         #stateData{
             border: 3px solid transparent;
             border-image: linear-gradient(to right, red, yellow);
@@ -70,16 +91,98 @@
             font-size: 3vw;
         }
         #piechart{
+            width: 50%;
+            height: auto;
             margin: auto;
         }
+
+        #news .row{
+            border: grey 2px solid;
+            border-radius: 15px;
+            padding: 1%;
+            margin-bottom: 25px;
+        }
+        #news img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        #news a{
+            font-size: 1.5rem;
+        }
+        
+        @media only screen and (max-width: 900px) {
+            .headData .col-3{
+            font-size: 3vw;
+            color: #042180;
+            background-color: #6ac6c3;
+        }
+        }
+
+        @media only screen and (max-width: 775px) {
+            #news a{
+            font-size: 1.2rem;
+            }
+            #piechart{
+                width: 80%;
+                height: auto;
+                margin: auto;
+            }
+            .container, .container-sm{
+                max-width: 100%;
+            }
+            
+        }
+        
+        
 
     </style>
 
 
   </head>
   <body>
+
+
     
-    <div class="container mt-5">
+    <div class="dataIndia mt-5">
+        <h1>INDIA</h1>
+        <div class="headData">
+            <div class="row">
+                <div class="col-3">
+                    <p class="text-center"><b> Active </b> </p>
+                </div>
+                <div class="col-3">
+                    <p class="text-center"><b> Confirmed </b> </p>
+                </div>
+                <div class="col-3">
+                    <p class="text-center"><b> Recovered </b> </p>
+                </div>
+                <div class="col-3">
+                    <p class="text-center"><b> Deaths </b> </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <p class="text-center"><%= totalData.active  %> </p>
+            </div>
+            <div class="col-3">
+                <p class="text-center"><%= totalData.confirmed  %> </p>
+            </div>
+            <div class="col-3">
+                <p class="text-center"><%= totalData.recovered %> </p>
+            </div>
+            <div class="col-3">
+                <p class="text-center"><%= totalData.deaths %> </p>
+            </div>
+        </div>
+
+    </div>
+
+
+    
+    <div id="cases" class="container mt-5">
         <div class="row">
             <div class="col-12 col-sm-4 mb-5 mt-5">
 
@@ -87,6 +190,7 @@
                     <select id="mySelect" name="state" class="btn btn-primary btn-lg">
         
                         <option value="">State</option>
+                        <option value="India">India</option>
                         <option value="Delhi">Delhi</option>
                         <option value="Maharashtra">Maharashtra</option>
                         <option value="Karnataka">Karnataka</option>
@@ -140,20 +244,79 @@
                     <% } %> 
                 <% }) %>
                 
-                <h3 class="text-center mt-5">Total Cases</h3>
-                <div id="piechart"></div>
             </div>
-
-            <!-- <h1>India Total cases</h1>
-                
-                <p> <b>Active Cases ---  </b> <%= totalData.active %></p>
-                <br>
-                <p> <b>Confirmed Cases ---  </b> <%= totalData.confirmed %></p>
-                <br>
-                <p> <b> recovered ---  </b> <%= totalData.recovered %></p> -->
-
+            
         </div>
+        <h1 class="text-center my-5">Total Cases</h1>
+        <div id="piechart"></div>
     </div>
+
+
+    <div id="news" class="container ">
+        <h1 class="text-center my-4">Top 5 News of the Day</h1>
+
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-4 col-lg-3">
+                <img src="https://static.toiimg.com/thumb/78844976.cms?width=680&height=512&imgsize=141908" alt="">
+            </div>
+            <div class="col-12  col-sm-8 col-lg-9">
+                <a href="https://timesofindia.indiatimes.com/life-style/health-fitness/health-news/coronavirus-5-countries-which-are-leading-the-race/photostory/78844240.cms"> Coronavirus vaccine: 5 countries which are leading the race</a>
+                <p>With over 45 vaccines under contention, we are inching closer to getting a COVID vaccine ready. Government officials and philanthropists have suggested that mass immunization could be rolled out in the next 7-8 months, with the earliest doses being made available by January
+                    ...</p>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-4 col-lg-3">
+                <img src="https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/10/25/Pictures/britain-eu-politics-brexit_faeaf226-1626-11eb-b504-c4c734a23405.jpg" alt="">
+            </div>
+            <div class="col-12  col-sm-8 col-lg-9">
+                <a href="https://www.hindustantimes.com/world-news/ventilation-key-to-preventing-covid-19-say-top-uk-experts/story-bNnNtg1b0fDv6UTmMGxuxI.html"> Ventilation key to preventing Covid-19, say top UK experts</a>
+                <p>Check the ventilation in your office space because poor airflow raises the 
+                    risk of exposure to Covid-19, top British experts advising the UK ...</p>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-4 col-lg-3">
+                <img src="https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/10/25/Pictures/supporters-outside-concord-president-pence-reacts-hampshire_e0baa61e-167e-11eb-b8b5-01f2e62a12bd.jpg" alt="">
+            </div>
+            <div class="col-12  col-sm-8 col-lg-9">
+                <a href="https://www.hindustantimes.com/world-news/ventilation-key-to-preventing-covid-19-say-top-uk-experts/story-bNnNtg1b0fDv6UTmMGxuxI.html">VP Mike Pence tested negative for Covid-19 after top aide tested positive</a>
+                <p>Vice President Mike Pence’s chief of staff, Marc Short, has tested positive for coronavirus along with at least one other key adviser, raising the prospect of another...</p>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-4 col-lg-3">
+                <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2020-10/09/full/1602187115-5378.jpg" alt="">
+            </div>
+            <div class="col-12  col-sm-8 col-lg-9">
+                <a href="https://www.business-standard.com/article/current-affairs/coronavirus-live-update-india-cases-top-7-8-mn-global-tally-at-42-334-954-120102400030_1.html">Coronavirus LIVE updates: Indias Covid-19 recovery rate improves to 90%</a>
+                <p>Coronavirus LIVE updates: India's Covid-19 recovery rate improves to 90% 
+                    ... Islamabad has reported its highest single-day spike in the number of 
+                    Covid-19 ... Islamabad's District Health Officer Zaeem Zia told Dawn news 
+                    on ...</p>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-4 col-lg-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShOAWffuhVZQScHQif_VlOV-cteDmzQs8I9hCd5gSMIydkwV9o4DAtvug&usqp=CAI&s" alt="">
+            </div>
+            <div class="col-12  col-sm-8 col-lg-9">
+                <a href="">The US just reported its highest number of Covid-19 infections in one day 
+                    since the pandemic's start</a>
+                <p>The good news, Adams said, is that the country's Covid-19 mortality rate 
+                    has decreased by about 85% thanks to multiple factors, including the ...</p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
@@ -170,13 +333,13 @@
     ['states', 'cases'],
     ['Delhi', 344000],
     ['Maharashtra', 1630000],
-    ['Tamil Nadu', 700000],
+    ['Uttar Pradesh', 700000],
     ['Andhra Pradesh', 796000],
     ['Karnataka', 793907],
     ['Others', 3496093 ]
     ]);
     // Optional; add a title and set the width and height of the chart
-    var options = {'title':'', 'width':550, 'height':400, tooltip: {text: 'percentage'}};
+    var options = {'title':'', tooltip: {text: 'percentage'}};
 
     // Display the chart inside the <div> element with id="piechart"
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
