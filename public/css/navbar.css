@@ -1,9 +1,11 @@
+
 body {
     position: relative;
     overflow-x: hidden;
     background-color: #000;
-    font-size: 3px;
+    font-size: 13px;
 }
+
 body,
 html { height: 100%;}
 .nav .open > a, 
@@ -180,25 +182,25 @@ html { height: 100%;}
     padding-right: 5px;
 }
 
-a[href*="#home"]::before {
+a[href*="/home"]::before {
   content: "\f015" !important;
 }
-a[href*="#sym"]::before {
+a[href*="/symp"]::before {
   content: "\f0fa" !important;
 }
-a[href*="#news"]::before {
+a[href*="/news"]::before {
   content: "\f1ea" !important;
 }
 
-a[href*="#hosp"]::before {
+a[href*="/covidCentres"]::before {
   content: "\f0f8" !important;
 }
 
-a[href*="#help"]::before {
+a[href*="/faq"]::before {
   content: "\f004" !important;
 }
 
-a[href*="#faq"]::before {
+a[href*="#thankYou"]::before {
   content: "\f128" !important;
 }
 

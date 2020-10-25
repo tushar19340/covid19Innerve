@@ -14,11 +14,12 @@ body{
     text-shadow: 2px 2px #A5CBAF;
     font-size: 45px;
 }
+
 #a{
-width: 90%px;
-margin: 2px auto;
-color: grey;
-padding-top: 10%;
+    width: 90%;
+    margin: 2px auto;
+    color: grey;
+    padding-top: 10%;
 }
 .myDIV{
     background-color: #957DAD;
