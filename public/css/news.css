@@ -121,3 +121,11 @@ body{
         max-width: 100%;
     }
 }
+
+@media only screen and (max-width: 400){
+    #piechart{
+        width: 35%;
+        height: auto;
+        margin: auto;
+    }
+}
