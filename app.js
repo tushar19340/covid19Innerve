@@ -66,9 +66,7 @@ app.get("/thankYou", function(req, res){
     res.render("thankYou");
 });
 
-
-
-
-app.listen(3000 || process.env.IP, process.env.IP, function(){
-	console.log("The Server has Started!")
+var server = app.listen(process.env.PORT || 3000, function(){
+    var port = server.address().port;
+    console.log("The server has started on port " + port);
 });
