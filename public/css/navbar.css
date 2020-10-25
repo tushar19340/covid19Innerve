@@ -1,11 +1,9 @@
-
 body {
     position: relative;
     overflow-x: hidden;
     background-color: #000;
     font-size: 13px;
 }
-
 body,
 html { height: 100%;}
 .nav .open > a, 
@@ -196,11 +194,11 @@ a[href*="/covidCentres"]::before {
   content: "\f0f8" !important;
 }
 
-a[href*="/faq"]::before {
+a[href*="/thankYou"]::before {
   content: "\f004" !important;
 }
 
-a[href*="#thankYou"]::before {
+a[href*="/faq"]::before {
   content: "\f128" !important;
 }
 

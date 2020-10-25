@@ -6,13 +6,12 @@ body{
     display: none;
 }
 #faq{
-    width: 90%;
+    /* width: 90%; */
     margin: 20px auto;
-    margin-left: 15%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     color: white;
     text-shadow: 2px 2px #A5CBAF;
-    font-size: 45px;
+    font-size: 4vw;
 }
 
 #a{
@@ -54,5 +53,8 @@ h2{
 @media only screen and (max-width: 900px){
     .contentWidth{
         width: 90%;
+    }
+    #faq {
+      font-size: 6vw;
     }
 }
