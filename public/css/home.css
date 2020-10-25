@@ -1,0 +1,87 @@
+/*-------------------------------*/
+/*            Overlay            */
+/*-------------------------------*/
+body {
+    background-color: #000;
+  }
+  #header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+  }
+  #header h1 {
+    color: #fff;
+    text-shadow: 3px 3px grey;
+    font-family: Lucida Console;
+    font-size: 60px;
+    font-weight: bold;
+  }
+  .slideshow { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .slideshow li { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 28s linear infinite; 
+  }
+  
+  .slideshow li:nth-child(1) { 
+    /* background-image: url(3685271.jpg)  */
+    background-image: url(/assets/photos/3685271.jpg) 
+  }
+  .slideshow li:nth-child(2) { 
+    background-image: url(/assets/photos/3651161.jpg);
+    animation-delay: 5.5s; 
+  }
+  .slideshow li:nth-child(3) { 
+    background-image: url(/assets/photos/3683208.jpg);
+    animation-delay: 11s; 
+  }
+  .slideshow li:nth-child(4) { 
+    background-image: url(/assets/photos/3645518.jpg);
+    animation-delay: 16.5s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url(/assets/photos/3707125.jpg);
+    animation-delay: 22s; 
+  }
+  
+  @keyframes imageAnimation { 
+    0% { 
+      opacity: 0; 
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1
+    }
+    30% {
+      opacity: 0
+    }
+  }
+  
+  /* Older browser support - .no-cssanimations class added by modernizr */
+  .no-cssanimations .slideshow li {
+    opacity: 1;
+  }
+  

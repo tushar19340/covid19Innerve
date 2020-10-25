@@ -1,0 +1,123 @@
+body{
+    background-color: black;
+    color: white;
+}
+.dataIndia .col-3 {
+    border: 2px solid #064751;
+    padding: 5px;
+}
+.dataIndia{
+    width: 90%;
+    margin: auto;
+    color: white;
+}
+.dataIndia p{
+    margin: 0 auto 0 auto;
+}
+
+.headData .col-3{
+    font-size: 2vw;
+    color: #042180;
+    background-color: #6ac6c3;
+}
+#stateData{
+    border: 3px solid transparent;
+    border-image: linear-gradient(to right, red, yellow);
+    border-image-slice: 1;
+    padding: 5%;
+}
+#active{
+    background: #f2709c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff9472, #f2709c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff9472, #f2709c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 10%;
+    width: 100%;
+    margin: auto;
+    border-radius: 20px;
+}
+
+#confirmed{
+    background: #43cea2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    padding: 10%;
+    width: 100%;
+    margin: auto;
+    border-radius: 20px;
+}
+#recovered{
+    background: #B3FFAB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #12FFF7, #B3FFAB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #12FFF7, #B3FFAB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 10%;
+    width: 100%;
+    margin: auto;
+    border-radius: 20px;
+}
+
+#deaths{
+    background: #E6DADA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 10%;
+    width: 100%;
+    margin: auto;
+    border-radius: 20px;
+}
+#stateData{
+    color: white;
+}
+
+#stateData h1{
+    font-size: 5vw;
+}
+#stateData h5{
+    font-size: 3vw;
+}
+#piechart{
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+
+#news .row{
+    border: grey 2px solid;
+    border-radius: 15px;
+    padding: 1%;
+    margin-bottom: 25px;
+}
+#news img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#news a{
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .headData .col-3{
+    font-size: 3vw;
+    color: #042180;
+    background-color: #6ac6c3;
+}
+}
+
+@media only screen and (max-width: 775px) {
+    #news a{
+    font-size: 1.2rem;
+    }
+    #piechart{
+        width: 80%;
+        height: auto;
+        margin: auto;
+    }
+    .container, .container-sm{
+        max-width: 100%;
+    }
+}

@@ -6,10 +6,17 @@ bodyParser 		= require("body-parser");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', "ejs");
-app.use( express.static( "public" ) );
+app.use(express.static(__dirname + "/public"));
 
+app.get("/", function(req, res){
+    res.redirect("/home");
+});
 
-app.get('/', function(req, res){
+app.get("/home", function(req, res){
+    res.render("home");
+});
+
+app.get('/news', function(req, res){
     var totalData;
     var statesData;
     var state = "Delhi";
@@ -42,6 +49,21 @@ app.get('/', function(req, res){
             }
         }
     });
+});
+
+
+app.get("/covidCentres", function(req, res){
+    res.render("covidCentres");
+});
+
+app.get("/faq", function(req, res){
+    res.render("faq");
+});
+app.get("/symp", function(req, res){
+    res.render("symp");
+});
+app.get("/thankYou", function(req, res){
+    res.render("thankYou");
 });
 
 

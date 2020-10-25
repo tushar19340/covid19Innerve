@@ -1,0 +1,57 @@
+body{
+    background-color: black;
+    color: white;
+}
+.hide {
+    display: none;
+}
+#faq{
+    width: 90%;
+    margin: 20px auto;
+    margin-left: 15%;
+    margin-bottom: 10%;
+    color: white;
+    text-shadow: 2px 2px #A5CBAF;
+    font-size: 45px;
+}
+#a{
+width: 90%px;
+margin: 2px auto;
+color: grey;
+padding-top: 10%;
+}
+.myDIV{
+    background-color: #957DAD;
+    width: fit-content;
+    margin: auto;
+    padding: 1vw;
+    border-radius: 15px;
+}
+.myDIV:hover + .hide {
+    display: block;
+    color: black;
+    background-color: #ACD0C0;
+    width: 100%;
+    border-radius: 10px;
+    margin: auto;
+    padding: 1%;
+    margin-bottom: 2%;
+}
+h2{
+    font-size: 125%;
+}
+.contentWidth{
+    width: 70%;
+    margin: auto ;
+}
+.container{
+    border: 2px solid #A9A9A9;
+    border-radius: 20px;
+    max-width: 70%;
+
+}
+@media only screen and (max-width: 900px){
+    .contentWidth{
+        width: 90%;
+    }
+}

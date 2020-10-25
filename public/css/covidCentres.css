@@ -1,0 +1,53 @@
+body{
+    background-color: black;
+}
+.container{
+    margin:20px auto;
+    width: 70%;
+    border: 2px solid   #A9A9A9;
+    border-radius: 20px;
+    padding-top: 30px;
+    /*padding-left: 30px;
+    padding-right: 30px;*/
+  
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #F1F0E8;
+}
+.hd{
+    text-align: center;
+    color: #957DAD;
+    text-shadow: 2px 2px white;
+    font-size: 4rem;
+}
+.hr{
+    color: #dea5a4 ;
+  
+}
+.color{
+    color: grey;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.card{
+    background-color: #8DA290;
+    
+}
+.card-body{
+    color: black;
+}
+  
+  
+  
+  
