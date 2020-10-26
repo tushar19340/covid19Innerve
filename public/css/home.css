@@ -17,6 +17,9 @@ body {
     font-size: 6vw;
     font-weight: bold;
   }
+  #header h4{
+    text-shadow: 1px 1px black;
+  }
   
   .slideshow { 
     position: fixed;

@@ -3,6 +3,7 @@ body {
     overflow-x: hidden;
     background-color: #000;
     font-size: 13px;
+    font-family: 'Montserrat', sans-serif
 }
 body,
 html { height: 100%;}
