@@ -1,6 +1,7 @@
 body{
     background-color: black;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 .dataIndia .col-3 {
     border: 2px solid #064751;
